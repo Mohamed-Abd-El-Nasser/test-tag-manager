@@ -19,17 +19,27 @@ function App() {
     
     
     `;
+
     // const value = `<h1>Helloooo</h1>`;
-    useEffect(() => {
-        // const parsedHTML = document
-        //     .createRange()
-        //     .createContextualFragment(value);
-        // ref.current.appendChild(parsedHTML);
-        // console.log('LLLLL', ref.current);
-        const script = document.createElement('script');
-        script.innerText = value;
-        document.body.appendChild(script);
-    }, []);
+    // useEffect(() => {
+    //     // const parsedHTML = document
+    //     //     .createRange()
+    //     //     .createContextualFragment(value);
+    //     // ref.current.appendChild(parsedHTML);
+    //     // console.log('LLLLL', ref.current);
+    //     const script = document.createElement('script');
+    //     script.innerText = value;
+    //     document.body.appendChild(script);
+    // }, []);
+    window.GbLoadInit = function () {
+        GbSdk.init({
+            APIKey: '07edad92b86d4200ad2a13258dd1b0f2',
+            lang: 'en',
+            playerUniqueId: 'cl5qjkr30000r01l16s3ehs8p',
+            playerAttributes: {},
+        });
+    };
+    console.log('init gameball');
     return (
         // <iframe
         //     // width={200}
