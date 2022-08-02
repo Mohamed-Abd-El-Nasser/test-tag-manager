@@ -27,8 +27,9 @@ function App() {
         const parsedHTML = document
             .createRange()
             .createContextualFragment(value);
-        ref.current.appendChild(parsedHTML);
-        console.log('LLLLL', ref.current);
+        // ref.current.appendChild(parsedHTML);
+        document.body.appendChild(parsedHTML);
+        console.log('LLLLL', parsedHTML);
         // const script = document.createElement('script');
         // script.innerText = value;
         // document.body.appendChild(script);
