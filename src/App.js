@@ -32,6 +32,7 @@ function App() {
     //     document.body.appendChild(script);
     // }, []);
     window.GbLoadInit = function () {
+        // eslint-disable-next-line no-undef
         GbSdk.init({
             APIKey: '07edad92b86d4200ad2a13258dd1b0f2',
             lang: 'en',
