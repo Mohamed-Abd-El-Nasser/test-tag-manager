@@ -21,11 +21,14 @@ function App() {
     `;
     // const value = `<h1>Helloooo</h1>`;
     useEffect(() => {
-        const parsedHTML = document
-            .createRange()
-            .createContextualFragment(value);
-        ref.current.appendChild(parsedHTML);
-        console.log('LLLLL', ref.current);
+        // const parsedHTML = document
+        //     .createRange()
+        //     .createContextualFragment(value);
+        // ref.current.appendChild(parsedHTML);
+        // console.log('LLLLL', ref.current);
+        const script = document.createElement('script');
+        script.innerText = value;
+        document.body.appendChild(script);
     }, []);
     return (
         // <iframe
@@ -34,8 +37,8 @@ function App() {
         //     srcDoc={value}
         //     ref={ref}
         // />
-        <div ref={ref} style={{ height: '500px' }} />
-        //<div></div>
+        //<div ref={ref} style={{ height: '500px' }} />
+        <div></div>
     );
 }
 
