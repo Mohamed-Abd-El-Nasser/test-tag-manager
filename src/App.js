@@ -5,6 +5,7 @@ import React, { useEffect, useState, useRef } from 'react';
 function App() {
     const ref = useRef();
     const value = `
+    <script>
         window.GbLoadInit = function () {
             GbSdk.init({
                 APIKey: '07edad92b86d4200ad2a13258dd1b0f2',
@@ -14,18 +15,19 @@ function App() {
             });
         };
         console.log('init gameball');
+        </script>
     `;
 
     // const value = `<h1>Helloooo</h1>`;
     useEffect(() => {
-        //     // const parsedHTML = document
-        //     //     .createRange()
-        //     //     .createContextualFragment(value);
-        //     // ref.current.appendChild(parsedHTML);
-        //     // console.log('LLLLL', ref.current);
-        const script = document.createElement('script');
-        script.innerText = value;
-        document.body.appendChild(script);
+        const parsedHTML = document
+            .createRange()
+            .createContextualFragment(value);
+        ref.current.appendChild(parsedHTML);
+        console.log('LLLLL', ref.current);
+        // const script = document.createElement('script');
+        // script.innerText = value;
+        // document.body.appendChild(script);
     }, []);
     // window.GbLoadInit = function () {
     //     // eslint-disable-next-line no-undef
@@ -55,8 +57,7 @@ function App() {
         //     srcDoc={value}
         //     ref={ref}
         // />
-        //<div ref={ref} style={{ height: '500px' }} />
-        <div></div>
+        <div ref={ref} style={{ height: '500px' }} />
     );
 }
 
