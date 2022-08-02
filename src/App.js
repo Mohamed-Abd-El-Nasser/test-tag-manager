@@ -5,12 +5,16 @@ import React, { useEffect, useState, useRef } from 'react';
 function App() {
     const ref = useRef();
     const value = `
+    <script
+            defer
+            src="https://assets.gameball.co/widget/js/gameball-init.min.js"
+        ></script>
     <script>
         window.GbLoadInit = function () {
             GbSdk.init({
                 APIKey: '07edad92b86d4200ad2a13258dd1b0f2',
                 lang: 'en',
-                playerUniqueId: 'cl5qjkr30000r01l16s3ehs8p',
+                playerUniqueId: '',
                 playerAttributes: {},
             });
         };
