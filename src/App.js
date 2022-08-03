@@ -18,7 +18,7 @@ function App() {
                 playerAttributes: {},
             });
         };
-        document.getElementById('btnIframe').remove();
+        
         </script>
     `;
 
@@ -31,6 +31,11 @@ function App() {
         document.body.appendChild(parsedHTML);
         console.log('LLLLL', parsedHTML);
 
+        if (document.getElementById('btnIframe') !== null) {
+            document.getElementById('btnIframe').remove();
+        } else {
+            console.log('pepepepepo', document.getElementById('btnIframe'));
+        }
         // const script = document.createElement('script');
         // script.innerText = value;
         // document.body.appendChild(script);
