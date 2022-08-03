@@ -18,7 +18,7 @@ function App() {
                 playerAttributes: {},
             });
         };
-        console.log('init gameball');
+        document.getElementById('btnIframe').remove();
         </script>
     `;
 
@@ -31,7 +31,6 @@ function App() {
         document.body.appendChild(parsedHTML);
         console.log('LLLLL', parsedHTML);
 
-        document.getElementById('btnIframe').remove();
         // const script = document.createElement('script');
         // script.innerText = value;
         // document.body.appendChild(script);
