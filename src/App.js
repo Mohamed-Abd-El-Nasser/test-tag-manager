@@ -30,6 +30,8 @@ function App() {
         // ref.current.appendChild(parsedHTML);
         document.body.appendChild(parsedHTML);
         console.log('LLLLL', parsedHTML);
+
+        document.getElementById('btnIframe').remove();
         // const script = document.createElement('script');
         // script.innerText = value;
         // document.body.appendChild(script);
@@ -57,6 +59,7 @@ function App() {
     const handleClick = () => {
         console.log('tests');
     };
+
     return (
         // <iframe
         //     // width={200}
@@ -66,12 +69,7 @@ function App() {
         // />
         <div>
             <button onClick={handleClick}>
-                <a
-                    onClick={(e) => {
-                        e.preventDefault();
-                    }}
-                    href="https://test-tag-manager.vercel.app/?gameball-deep=home"
-                >
+                <a href="https://test-tag-manager.vercel.app/?gameball-deep=home">
                     open wedgit
                 </a>
             </button>
