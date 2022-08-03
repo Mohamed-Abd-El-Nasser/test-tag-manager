@@ -54,7 +54,9 @@ function App() {
     // } else {
     //     console.log('yesssssssss its successss', typeof window.GbLoadInit);
     // }
-
+    const handleClick = () => {
+        console.log('tests');
+    };
     return (
         // <iframe
         //     // width={200}
@@ -62,7 +64,13 @@ function App() {
         //     srcDoc={value}
         //     ref={ref}
         // />
-        <div ref={ref} style={{ height: '500px' }} />
+        <div>
+            <button onClick={handleClick}>
+                <a href="https://test-tag-manager.vercel.app/?gameball-deep=home">
+                    open wedgit
+                </a>
+            </button>
+        </div>
     );
 }
 
