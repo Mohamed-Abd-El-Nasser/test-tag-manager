@@ -39,7 +39,7 @@ function App() {
         // const script = document.createElement('script');
         // script.innerText = value;
         // document.body.appendChild(script);
-    }, []);
+    }, [document.getElementById('btnIframe')]);
     // window.GbLoadInit = function () {
     //     // eslint-disable-next-line no-undef
     //     GbSdk.init({
