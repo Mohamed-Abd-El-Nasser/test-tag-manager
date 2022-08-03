@@ -66,7 +66,12 @@ function App() {
         // />
         <div>
             <button onClick={handleClick}>
-                <a href="https://test-tag-manager.vercel.app/?gameball-deep=home">
+                <a
+                    onClick={(e) => {
+                        e.preventDefault();
+                    }}
+                    href="https://test-tag-manager.vercel.app/?gameball-deep=home"
+                >
                     open wedgit
                 </a>
             </button>
