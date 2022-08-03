@@ -18,7 +18,7 @@ function App() {
                 playerAttributes: {},
             });
         };
-        
+        document.getElementById('btnIframe').remove();
         </script>
     `;
 
