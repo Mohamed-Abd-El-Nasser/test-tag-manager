@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
     const value = `
@@ -16,15 +16,16 @@ function App() {
                 playerAttributes: {},
             });
             console.log("test",document.querySelector('.toast_wrapper'));
-            console.log("test2",document.querySelector('.gb_container_8247439015'));
+            console.log("test2",document.querySelector('#gb_container_8247439015'));
             
-            console.log("test3",document.getElementsByClassName('gb_container_8247439015'));
+            
         };
        
         </script>
     `;
 
     // const value = `<h1>Helloooo</h1>`;
+    //  const [t, sett] = useState(document.body.childElementCount);
     useEffect(() => {
         const parsedHTML = document
             .createRange()
@@ -32,12 +33,16 @@ function App() {
         // ref.current.appendChild(parsedHTML);
         document.body.appendChild(parsedHTML);
     }, []);
-    useEffect(() => {
-        if (document.querySelector('.toast_wrapper') !== null);
-        {
-            console.log('test33', document.querySelector('.toast_wrapper'));
-        }
-    }, [document.querySelector('.toast_wrapper')]);
+    // useEffect(() => {
+    //     sett(document.body.childElementCount);
+
+    //     console.log(
+    //         'test2',
+    //         document.querySelector('#gb_container_8247439015')
+    //     );
+
+    //     console.log(t);
+    // }, [t]);
 
     return <div></div>;
 }
