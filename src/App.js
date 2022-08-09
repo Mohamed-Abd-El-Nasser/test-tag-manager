@@ -15,12 +15,16 @@ function App() {
                 playerUniqueId: '',
                 playerAttributes: {},
             });
-            console.log("test",document.querySelector('.toast_wrapper'));
+            
             console.log("test2",document.querySelector('#gb_container_8247439015'));
             
-            
-            console.log('test4', document.querySelector('#gb_container_8247439015').nodeValue);
-
+            console.log(
+                'test4',
+                document.querySelector('#gb_container_8247439015').childElementCount
+            );
+            if(document.querySelector('#gb_container_8247439015').childElementCount!==0){
+                console.log("test",document.querySelector('.toast_wrapper'));
+            }
         };
        
         </script>
@@ -45,6 +49,7 @@ function App() {
 
     //     console.log(t);
     // }, [t]);
+
     return <div></div>;
 }
 
