@@ -31,6 +31,12 @@ function App() {
         // ref.current.appendChild(parsedHTML);
         document.body.appendChild(parsedHTML);
     }, []);
+    useEffect(() => {
+        if (document.querySelector('.toast_wrapper') !== null);
+        {
+            console.log('test33', document.querySelector('.toast_wrapper'));
+        }
+    }, [document.querySelector('.toast_wrapper')]);
 
     return <div></div>;
 }
