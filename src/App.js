@@ -16,7 +16,7 @@ function App() {
                 playerAttributes: {},
             });
         };
-        console.log("test",document.querySelector('toast_wrapper'));
+        console.log("test",document.querySelector('.toast_wrapper'));
         </script>
     `;
 
