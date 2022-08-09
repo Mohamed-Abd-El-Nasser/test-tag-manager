@@ -16,22 +16,23 @@ function App() {
                 playerAttributes: {},
             });
             
-            console.log("test2",document.querySelector('#gb_container_8247439015'));
             
-            console.log(
-                'test4',
-                document.querySelector('#gb_container_8247439015').childElementCount
-            );
-            if(document.querySelector('#gb_container_8247439015').childElementCount!==0){
-                console.log("test",document.querySelector('.toast_wrapper'));
-            }
         };
-       
+ 
+        document.querySelector('#gb_container_8247439015').addEventListener('change',()=>{
+            console.log("test");
+        })
+        document.body.addEventListener('change',()=>{
+            console.log("changed");
+        })
+          
         </script>
     `;
 
     // const value = `<h1>Helloooo</h1>`;
-    //  const [t, sett] = useState(document.body.childElementCount);
+    // const [t, sett] = useState(
+    //     document.querySelector('#gb_container_8247439015').childElementCount | 0
+    // );
     useEffect(() => {
         const parsedHTML = document
             .createRange()
@@ -40,7 +41,9 @@ function App() {
         document.body.appendChild(parsedHTML);
     }, []);
     // useEffect(() => {
-    //     sett(document.body.childElementCount);
+    //     sett(
+    //         document.querySelector('#gb_container_8247439015').childElementCount
+    //     );
 
     //     console.log(
     //         'test2',
