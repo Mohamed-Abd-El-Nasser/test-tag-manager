@@ -19,6 +19,8 @@ function App() {
             console.log("test2",document.querySelector('#gb_container_8247439015'));
             
             
+            console.log('test4', document.querySelector('#gb_container_8247439015').nodeValue);
+
         };
        
         </script>
@@ -43,7 +45,6 @@ function App() {
 
     //     console.log(t);
     // }, [t]);
-
     return <div></div>;
 }
 
