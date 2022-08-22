@@ -10,7 +10,7 @@ function App() {
     <script>
         window.GbLoadInit = function () {
             GbSdk.init({
-                APIKey: '',
+                APIKey: '07edad92b86d4200ad2a13258dd1b0f2',
                 lang: 'en',
                 playerUniqueId: '',
                 playerAttributes: {},
