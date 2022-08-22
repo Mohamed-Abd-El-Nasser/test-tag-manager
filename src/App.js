@@ -1,8 +1,8 @@
-import './App.css';
-import React, { useEffect, useState } from 'react';
+import "./App.css";
+import React, { useEffect } from "react";
 
 function App() {
-    const value = `
+  const value = `
     <script
             defer
             src="https://assets.gameball.co/widget/js/gameball-init.min.js"
@@ -10,7 +10,7 @@ function App() {
     <script>
         window.GbLoadInit = function () {
             GbSdk.init({
-                APIKey: '07edad92b86d4200ad2a13258dd1b0f2',
+                APIKey: '',
                 lang: 'en',
                 playerUniqueId: '',
                 playerAttributes: {},
@@ -29,31 +29,29 @@ function App() {
         </script>
     `;
 
-    // const value = `<h1>Helloooo</h1>`;
-    // const [t, sett] = useState(
-    //     document.querySelector('#gb_container_8247439015').childElementCount | 0
-    // );
-    useEffect(() => {
-        const parsedHTML = document
-            .createRange()
-            .createContextualFragment(value);
-        // ref.current.appendChild(parsedHTML);
-        document.body.appendChild(parsedHTML);
-    }, []);
-    // useEffect(() => {
-    //     sett(
-    //         document.querySelector('#gb_container_8247439015').childElementCount
-    //     );
+  // const value = `<h1>Helloooo</h1>`;
+  // const [t, sett] = useState(
+  //     document.querySelector('#gb_container_8247439015').childElementCount | 0
+  // );
+  useEffect(() => {
+    const parsedHTML = document.createRange().createContextualFragment(value);
+    // ref.current.appendChild(parsedHTML);
+    document.body.appendChild(parsedHTML);
+  }, []);
+  // useEffect(() => {
+  //     sett(
+  //         document.querySelector('#gb_container_8247439015').childElementCount
+  //     );
 
-    //     console.log(
-    //         'test2',
-    //         document.querySelector('#gb_container_8247439015')
-    //     );
+  //     console.log(
+  //         'test2',
+  //         document.querySelector('#gb_container_8247439015')
+  //     );
 
-    //     console.log(t);
-    // }, [t]);
+  //     console.log(t);
+  // }, [t]);
 
-    return <div></div>;
+  return <div></div>;
 }
 
 export default App;
