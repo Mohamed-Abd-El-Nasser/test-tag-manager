@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import "./App.css";
 import React, { useEffect } from "react";
 
@@ -51,7 +52,17 @@ function App() {
   //     console.log(t);
   // }, [t]);
 
-  return <div></div>;
+  return (
+    <div>
+      <button
+        onClick={() => {
+          GbSdk.toggle();
+        }}
+      >
+        TOGGLE ME
+      </button>
+    </div>
+  );
 }
 
 export default App;
